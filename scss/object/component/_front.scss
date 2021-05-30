@@ -1,0 +1,21 @@
+.c-front{
+    &__title{
+        margin:10px;
+        color:white;
+        font-size: 5rem;
+        position: relative;
+        display: inline-block;
+        &::after{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            left: 13.5px;
+            bottom:-20px;
+            height: 5px;
+            width: 35px;
+            background-color: white;
+            z-index: 100;
+
+        }
+    }
+}

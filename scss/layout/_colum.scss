@@ -1,0 +1,25 @@
+.l-colum{
+    &-main{
+        @include media_PC_wide{
+            width: calc(100% - 367px);
+        }
+        }   
+        &-nav{
+            max-width:367px;
+            width: 87%;
+            position: absolute;
+            top:0;
+            right: 0;
+            height: 100%;
+            transform: translate(367px);
+            z-index: 3;
+            @include media_PC_wide{
+                position: static;
+                display: block;
+                height: auto;
+                transform: translate(0);
+
+            }    
+        }
+    
+}

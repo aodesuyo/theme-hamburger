@@ -1,0 +1,15 @@
+.u-post{
+    @include media_PC{
+        &__margin--lg{
+            margin-bottom: 120px;
+        }
+        &__marign--xl{
+            margin-bottom: 240px;
+        }
+    }
+    @include media_PC_wide{
+        &__margin--lg,&__marign--xl{
+            margin-bottom:60px;
+        }
+    }
+}

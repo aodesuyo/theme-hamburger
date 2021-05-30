@@ -1,0 +1,51 @@
+.p-pagenation{
+    display: flex;
+    justify-content:space-between;
+    color:$darkgray;
+    margin: 0 5% 30px;
+    @include media_PC{
+        justify-content: center;
+        align-items: center;
+    }
+    @include media_PC_wide{
+        margin-bottom: 62px;
+    }
+
+    li,span,a{
+        font-size: 1.6rem;
+        @include media_PC{
+            font-weight: 600;
+        }
+    }
+    &__current-text{
+        display: none;
+        @include media_PC{
+            display: block;
+        }
+    }
+    &__prev ,&__next{
+        display: block;
+        margin: 0 10px;
+        span{
+            @include media_PC{
+                display: none;
+            }    
+        }
+    }
+}
+.p-pagenation-list{
+    display: none;
+    @include media_PC{
+        display: flex;
+    }
+    &__item{
+        display: block;
+        padding: 7px 13px;
+        border: solid 1.5px $darkgray;
+        margin: 0 7.5px;
+        &--current{
+            background-color: $blown;
+            color: white;
+        }
+    }
+}

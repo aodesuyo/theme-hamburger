@@ -1,0 +1,20 @@
+.l-visual{
+    width: 100%;
+    height: 285px;
+    position: relative;
+    @include media_PC_wide{
+        height: 530px;
+    } 
+    &--archive{
+        overflow: hidden;
+        @include media_PC_wide{
+            height: 239px;
+        }
+    }
+    &--single{
+        height: 60vw;
+        @include media_PC{
+            height: 500px;
+        }
+    }
+}

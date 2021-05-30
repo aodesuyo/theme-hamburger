@@ -1,0 +1,67 @@
+.c-archive{
+    overflow: hidden;
+    &-card{
+        @include media_PC{
+            display: flex;
+            margin-bottom: 21px;
+        }
+        @include media_PC_wide{
+            margin-bottom: 30px;
+        }
+        &__visual{
+            width: 100%;
+            height: 50vw;
+            object-fit: cover;
+            vertical-align: bottom;
+            object-position: left top;
+            @include media_PC{
+                width: 50%;
+                height: auto;
+                vertical-align: baseline;
+            }
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            padding:30px 20% 44px 5%;
+            background-color: $blown;
+            margin-bottom: 21px;
+            @include media_PC{
+                margin-bottom: 0;
+                padding-right: 7%;
+            }
+            @include media_PC_wide{
+                padding-top: 53px;
+                padding-bottom: 60px;
+            }
+        }
+        &__btn{
+            $btnHeight:42px;
+            $btnWidth:163px;
+            background-color: #fff;
+            height: $btnHeight;
+            width: $btnWidth;
+            border-radius: 40px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $darkgray;
+            margin-left:21vw;
+            @include media_PC{
+                margin-left: 10vw;
+                margin-top: auto;
+                margin-bottom: 40px;
+            }
+
+            @include media_PC_wide{
+                $btnHeight_PC_wide:$btnHeight*1.8;
+                $btnWidth_PC_wide:$btnWidth*1.8;
+                
+                height: $btnHeight_PC_wide;
+                width: $btnWidth_PC_wide;
+
+                margin-left: calc(50% - #{$btnWidth_PC_wide} /2);
+
+            }
+        }
+    }
+}

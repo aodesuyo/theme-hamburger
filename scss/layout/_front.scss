@@ -1,0 +1,9 @@
+.l-service{
+    display: flex;
+    flex-direction: column;
+    @include media_PC{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}

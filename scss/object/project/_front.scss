@@ -1,0 +1,106 @@
+
+.p-service{
+    li{
+        background-size: cover;
+    }
+    li:first-child{
+        background-image: url(../../../img/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
+    }
+    li:last-child{
+        background-image: url(../../../img/473d814b175bd517b56eb309f2958725.png);
+    }
+    &__inner{
+        margin:20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 170vw;        
+        @include media_PC{
+            height: 80vw;
+            max-width: 625px;
+            max-height: 1196px;
+            
+        }
+        
+    }
+
+}
+.p-service-card{
+    background-color: white;
+    opacity: 0.8;
+    color:$blown;
+    margin:10px;
+    padding:4px;
+    &__term{
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 15px 5px;
+    }
+    &__desc{
+        margin: 15px 0;
+        font-size: 1.5rem;
+    }
+}
+.p-about{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 691px;
+    @include media_PC{
+        height: 415px;
+    }
+    &__layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 415px;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+       z-index: -1;
+       @include media_PC_wide{
+           width: 60%;        
+    }
+
+    }
+    &__map{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        iframe{
+            width: 100%;
+            height: 100%;              
+        }
+    }
+    &__wrapper{
+        background-color:rgba($color: #000000, $alpha: 0.3);
+        padding: 40px;
+        height: 100%;
+        @include media_PC_wide{
+            padding-top: 80px;
+            padding-left: 7%;
+        }
+    }
+    &__title{
+        font-size: 2.5rem;
+        margin: 0;
+        &::after{
+            width: 75px;
+            height: 2px;
+        }
+    }
+    &__text{
+        height: calc(100% - 100px);
+        margin-top: 40px;
+        overflow: hidden;
+        color: white;
+        line-height:2.5rem;
+        font-size: 1.2rem;
+        @include media_PC_wide{
+            width: 62%;
+            padding-right: 10%;
+        }
+    }
+}

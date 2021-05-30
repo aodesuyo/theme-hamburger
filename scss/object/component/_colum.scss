@@ -1,0 +1,8 @@
+.c-colum{
+    position: relative;
+    width: 100%;
+    @include media_PC_wide{
+        display: flex;
+    }
+
+}

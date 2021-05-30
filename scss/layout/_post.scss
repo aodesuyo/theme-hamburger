@@ -1,0 +1,11 @@
+.l-post{
+    &-wrapper{
+        padding: 0 20px 40px;
+        @include media_PC{
+            padding: 0 60px 10px;
+        }
+        @include media_PC_wide{
+            padding:0 100px 100px;
+        }
+    }
+}
