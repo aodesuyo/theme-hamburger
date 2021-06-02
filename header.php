@@ -9,11 +9,12 @@
 <body>
     <?php wp_body_open(); ?>
     <div class="c-colum">
-        <header class="l-header p-header">
-            <button class="p-header__nav-btn">Menu</button>
-            <div class="l-header-top">
-                <h1 class="p-header-top__title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ) ?></a></h1>
-                <?php get_search_form() ?>
-            </div>
+        <div class="l-colum-main">
+            <header class="l-header p-header">
+                <button class="p-header__nav-btn">Menu</button>
+                <div class="l-header-top">
+                    <h1 class="p-header-top__title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ) ?></a></h1>
+                    <?php get_search_form() ?>
+                </div>
         </header>

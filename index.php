@@ -1,5 +1,4 @@
 <?php get_header(); ?><!--header.phpを読み込むテンプレートタグ（インクルードタグ）-->
-        <div class="l-colum-main">
             <main>
                 <div class="l-visual c-visual c-visual--front">
                     <h2 class="c-visual__title">ダミーサイト</h2>

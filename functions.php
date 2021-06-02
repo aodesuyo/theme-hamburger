@@ -10,6 +10,11 @@
         add_theme_support('post-thumbnails');//アイキャッチ画像
         add_theme_support('title-tag');//タイトルを投稿ページに合わせて出力する
         add_theme_support('menus');//メニュー機能を有効にする
+
+        register_nav_menus(array(
+            'sidebar'=>'サイドバー'
+        ));
+        //メニュー位置を呼び出す
     }
     add_action( 'after_setup_theme','custom_theme_support');
     /*関数はafter_setup_themeをフックにして実行される*/
@@ -26,3 +31,7 @@
     }
     add_action('wp_enqueue_scripts','readScript');
     /*関数はwp_enqueueをフックにして実行される*/
+
+    add_theme_support( 'menus' );//メニュー機能を有効にする
+
+

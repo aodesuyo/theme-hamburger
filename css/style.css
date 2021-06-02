@@ -179,13 +179,14 @@ Component
   z-index: 100;
 }
 
-.c-nav__menu-title {
+.c-nav__menu-title > a {
+  display: block;
   font-size: 2rem;
   font-weight: 800;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
-.c-nav__menu-item {
+.c-nav__menu-item > a {
   font-size: 1.5rem;
   line-height: 45px;
   padding-left: 25px;
@@ -821,14 +822,15 @@ Project
   }
 }
 
-.p-nav__title {
+.p-nav__title > a {
   display: none;
 }
 
 @media only screen and (min-width: 1920px) {
-  .p-nav__title {
+  .p-nav__title > a {
     display: block;
     font-size: 4rem;
+    font-weight: 600;
     margin: 85px 0;
   }
 }
