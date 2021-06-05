@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                     <seciton class="p-about">
-                        <div class="p-about__wrapper">
+                        <div class="p-about__wrapper"><a name="a01"></a>
                             <div class="p-about__map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.787724907506!2d139.74293611465237!3d35.657601280199806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d86f1a0765113%3A0x7bdc203608f579ff!2z5p2x5LqsIOiKnSDjgajjgYbjgbXlsYvjgYbjgYvjgYQ!5e0!3m2!1sja!2sjp!4v1621291174138!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>

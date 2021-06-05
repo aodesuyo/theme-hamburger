@@ -179,14 +179,14 @@ Component
   z-index: 100;
 }
 
-.c-nav__menu-title > a {
+.c-nav__menu > li > a {
   display: block;
   font-size: 2rem;
   font-weight: 800;
   margin: 20px 0;
 }
 
-.c-nav__menu-item > a {
+.c-nav__menu .sub-menu li a {
   font-size: 1.5rem;
   line-height: 45px;
   padding-left: 25px;
@@ -798,6 +798,11 @@ Project
   padding: 0 10px;
 }
 
+.p-footer-widget {
+  display: flex;
+  justify-content: center;
+}
+
 .p-footer__copy {
   color: white;
   font-family: 'M PLUS 1p', sans-serif;
@@ -822,12 +827,12 @@ Project
   }
 }
 
-.p-nav__title > a {
+.p-nav__title {
   display: none;
 }
 
 @media only screen and (min-width: 1920px) {
-  .p-nav__title > a {
+  .p-nav__title {
     display: block;
     font-size: 4rem;
     font-weight: 600;

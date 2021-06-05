@@ -10,7 +10,7 @@
             display: none;
         }
     }
-    &__title>a{
+    &__title{
         display: none;
         @include media_PC_wide{
             display: block;

@@ -1,13 +1,16 @@
 .c-nav__menu{
-    &-title>a{
+    >li>a{
         display: block;
         font-size: 2rem;
         font-weight: 800;
         margin: 20px 0;
     }
-    &-item>a{
+    .sub-menu{
+        li a{
         font-size: 1.5rem;
         line-height: 45px;
         padding-left: 25px;
+        }
     }
+    
 }

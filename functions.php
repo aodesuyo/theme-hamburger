@@ -12,9 +12,10 @@
         add_theme_support('menus');//メニュー機能を有効にする
 
         register_nav_menus(array(
-            'sidebar'=>'サイドバー'
-        ));
-        //メニュー位置を呼び出す
+            'sidebar'=>'サイドバー',
+            'footerMenu'=>'フッターメニュー'
+        ));//メニュー位置を呼び出す
+        
     }
     add_action( 'after_setup_theme','custom_theme_support');
     /*関数はafter_setup_themeをフックにして実行される*/
@@ -33,5 +34,28 @@
     /*関数はwp_enqueueをフックにして実行される*/
 
     add_theme_support( 'menus' );//メニュー機能を有効にする
+    
+    function footer_widgets_init() {
+        register_sidebar (
+            array(
+                'name'          => 'フッターウィジェット',
+                'id'            => 'footer_widget',
+                'description'   => 'フッター用ウィジェットです',
+                'before_widget' => '<div id="%1$s" class="p-footer-widget">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<p class="p-footer__copy">',
+                'after_title'   => '</p>',
+            )
+        );
+    }
+    add_action( 'widgets_init', 'footer_widgets_init' );//footerのcopyrightをウィジェットから設定
+
+    function removeId( $id ){ 
+    return $id = array(); 
+    }
+    add_filter('nav_menu_item_id', 'removeId', 10);//menuからidを削除
 
 
+
+    
+  
