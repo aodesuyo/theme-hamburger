@@ -217,15 +217,16 @@ Component
 @media only screen and (min-width: 1920px) {
   .c-archive-card {
     margin-bottom: 30px;
+    height: 24vw;
+    overflow: hidden;
   }
 }
 
 .c-archive-card__visual {
   width: 100%;
   height: 50vw;
-  object-fit: cover;
   vertical-align: bottom;
-  object-position: left top;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 834px) {
@@ -246,6 +247,7 @@ Component
 
 @media only screen and (min-width: 834px) {
   .c-archive-card__wrapper {
+    width: 50%;
     margin-bottom: 0;
     padding-right: 7%;
   }
@@ -263,9 +265,6 @@ Component
   height: 42px;
   width: 163px;
   border-radius: 40px;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #707070;
   margin-left: 21vw;
 }
 
@@ -279,10 +278,17 @@ Component
 
 @media only screen and (min-width: 1920px) {
   .c-archive-card__btn {
+    margin-bottom: 0px;
     height: 75.6px;
     width: 293.4px;
     margin-left: calc(50% - 293.4px /2);
   }
+}
+
+.c-archive-card__btn a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #707070;
 }
 
 .c-visual {
@@ -302,7 +308,7 @@ Component
 }
 
 .c-visual--archive {
-  background-image: url(../../../img/maskgroup.jpg);
+  background-image: url(../img/maskgroup.jpg);
   min-width: 2000px;
   background-size: cover;
   background-position: -300px center;
@@ -365,92 +371,104 @@ Component
   left: 0;
 }
 
-.c-common__title {
+.c-common__title, .c-common__title a {
   margin: 30px 0;
   color: #3C2A10;
   font-size: 2rem;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__title {
+  .c-common__title, .c-common__title a {
     margin: 60px 0;
   }
 }
 
-.c-common__title--xl {
+.c-common__title--xl, .c-common__title a--xl {
   font-size: 4rem;
 }
 
-.c-common__title--lg {
+.c-common__title--lg, .c-common__title a--lg {
   font-size: 2.4rem;
 }
 
-.c-common__title--white {
+.c-common__title--white, .c-common__title--white a, .c-common__title a--white, .c-common__title a--white a {
   color: white;
   margin: 0;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__title--white {
+  .c-common__title--white, .c-common__title--white a, .c-common__title a--white, .c-common__title a--white a {
     margin-bottom: 24px;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-common__title--white {
+  .c-common__title--white, .c-common__title--white a, .c-common__title a--white, .c-common__title a--white a {
     font-size: 3.6rem;
     margin-bottom: 47px;
   }
 }
 
-.c-common__text {
+.c-common__text h2 {
+  margin: 30px 0;
+  color: #3C2A10;
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .c-common__text h2 {
+    margin: 60px 0;
+  }
+}
+
+.c-common__text, .c-common__text p {
   color: #3C2A10;
   font-size: 1.6rem;
   margin: 19px 0;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__text {
+  .c-common__text, .c-common__text p {
     margin: 60px 0;
   }
 }
 
-.c-common__text--bold {
+.c-common__text--bold, .c-common__text p--bold {
   font-weight: bold;
   margin: 30px 0;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__text--bold {
+  .c-common__text--bold, .c-common__text p--bold {
     margin: 60px 0;
   }
 }
 
-.c-common__text--white {
+.c-common__text--white, .c-common__text p--white {
   color: white;
   margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__text--white {
+  .c-common__text--white, .c-common__text p--white {
     margin-top: 10px;
   }
 }
 
-.c-common__text--white-bold {
+.c-common__text--white-bold, .c-common__text p--white-bold {
   color: white;
   font-weight: 600;
   margin-bottom: 0px;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-common__text--white-bold {
+  .c-common__text--white-bold, .c-common__text p--white-bold {
     margin: 10px 0;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-common__text--white-bold {
+  .c-common__text--white-bold, .c-common__text p--white-bold {
     font-size: 2.4rem;
   }
 }
@@ -1014,24 +1032,62 @@ Project
   }
 }
 
-.p-pagenation__current-text {
+.p-pagenation .pages {
   display: none;
 }
 
 @media only screen and (min-width: 834px) {
-  .p-pagenation__current-text {
+  .p-pagenation .pages {
     display: block;
   }
 }
 
-.p-pagenation__prev, .p-pagenation__next {
+.p-pagenation .previouspostslink, .p-pagenation .nextpostslink {
   display: block;
   margin: 0 10px;
+  display: flex;
+}
+
+.p-pagenation .previouspostslink span, .p-pagenation .nextpostslink span {
+  margin: 8px;
 }
 
 @media only screen and (min-width: 834px) {
-  .p-pagenation__prev span, .p-pagenation__next span {
+  .p-pagenation .previouspostslink span, .p-pagenation .nextpostslink span {
     display: none;
+  }
+}
+
+.p-pagenation .previouspostslink i, .p-pagenation .nextpostslink i {
+  padding: 5px 0;
+  font-size: 3rem;
+}
+
+.p-pagenation .page {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .p-pagenation .page {
+    display: block;
+    padding: 7px 13px;
+    border: solid 1.5px #707070;
+    margin: 0 7.5px;
+  }
+}
+
+.p-pagenation .current {
+  display: none;
+}
+
+@media only screen and (min-width: 834px) {
+  .p-pagenation .current {
+    display: block;
+    padding: 7px 13px;
+    border: solid 1.5px #707070;
+    margin: 0 7.5px;
+    background-color: #3C2A10;
+    color: white;
   }
 }
 

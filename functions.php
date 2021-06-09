@@ -55,6 +55,28 @@
     }
     add_filter('nav_menu_item_id', 'removeId', 10);//menuからidを削除
 
+    function hamburger_archive_title($title) {
+        if ( is_category() ) {
+            $title = single_cat_title( '', false ); 
+        } 
+        $title = 'Menu: <span>'. $title; 
+        return $title; 
+    }; 
+    add_filter( 'get_the_archive_title', 'hamburger_archive_title');//archiveのvisual部分 カテゴリ:からMenu:へ出力内容を変更
+    
+    remove_filter( 'pre_term_description', 'wp_filter_kses' );//カテゴリの説明文でhtmlを使用できるようにする
+
+    function humburger_pagenavi($args=array()){
+        if( !function_exists('wp_pagenavi') ) return;
+     
+        $classChange = array(
+            'wrapper_tag' => 'ul',
+            'wrapper_class' => 'p-pagenation'
+        );
+        $args = is_array($args) ? array_merge($classChange, $args) : $args;
+        wp_pagenavi($args);
+    }//ページネーションのクラス変更
+
 
 
     

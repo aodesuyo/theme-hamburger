@@ -1,147 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/ress.css" rel="stylesheet">
-    <link href="./css/hamburger.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="c-colum">
-        <div class="l-colum-main">
-            <header class="l-header p-header">
-                <button class="p-header__nav-btn">Menu</button>
-                <div class="l-header-top">
-                    <h1 class="p-header-top__title">Hamburger</h1>
-                    <form class="p-header-top__search">
-                        <input type="search" name="search" for="search" class="font-awesome">
-                        <i class="fas fa-search fa-2x"></i>
-                        <input type="submit" name="submit" value="検索" id="search">
-                    </form>                
-                </div>
-            </header>
-            <main>
-                <div class="l-visual l-visual--archive c-visual--archive">
-                    <div class="c-visual__layer"></div>
-                    <h2 class="c-visual__title">Menu:<br>
-                        <span class="c-visual__text">チーズバーガー</span></h2>
-                </div>
+<?php get_header(); ?><!--header.phpを読み込むテンプレートタグ（インクルードタグ）-->
+    <main>
+        <div class="l-visual l-visual--archive c-visual--archive">
+            <div class="c-visual__layer"></div>
+                <?php the_archive_title( '<h2 class="c-visual__title">', '</span></h2>' ) ?>
+            </div>  
                 <article class="l-archive-wrapper">
-                    <h2 class="c-common__title c-common__title--xl">小見出しが入ります</h2>
-                    <p class="c-common__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <div class="c-common__text">
+                        <?php echo category_description(); ?>
+                    </div>
                     <ul class="l-archive-list">
-                        <li class="c-archive-card">
-                            <img class="c-archive-card__visual" src="./img/group32.jpg">
-                                <div class="c-archive-card__wrapper">
-                                    <h3 class="c-common__title c-common__title--white">チーズバーガー</h3>
-                                    <dl class="c-archive-card__desc">
-                                        <dt class="c-common__text c-common__text--white-bold">小見出しが入ります</dt>
-                                        <dd class="c-common__text c-common__text--white">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-                                    </dl>
-                                    <button class="c-archive-card__btn">詳しく見る</button>
-                               </div>
-                        </li>
-                        <li class="c-archive-card">
-                            <img class="c-archive-card__visual" src="./img/group32.jpg">
-                            <div class="c-archive-card__wrapper">
-                                <h3 class="c-common__title c-common__title--white">ダブルチーズバーガー</h3>
-                                <dl class="c-archive-card__text">
-                                    <dt class="c-common__text c-common__text--white-bold">小見出しが入ります</dt>
-                                    <dd class="c-common__text c-common__text--white">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-                                </dl>
-                                <button class="c-archive-card__btn">詳しく見る</button>
-                            </div>
-                        </li>
-                        <li class="c-archive-card">
-                            <img class="c-archive-card__visual" src="./img/group32.jpg">
-                            <div class="c-archive-card__wrapper">
-                                <h3 class="c-common__title c-common__title--white">スペシャルチーズバーガー</h3>
-                                <dl class="c-archive-card__text">
-                                    <dt class="c-common__text c-common__text--white-bold">小見出しが入ります</dt>
-                                    <dd class="c-common__text c-common__text--white">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
-                                </dl>
-                                <button class="c-archive-card__btn">詳しく見る</button>
-                            </div>
-                        </li>
+                        <?php
+                        if(have_posts()):
+                        while(have_posts()):
+                            the_post();
+                            get_template_part('excerpt'); 
+                        endwhile;
+                        else:
+                            echo '<p class="c-common__text">記事はありません</p>';
+                        endif;
+                        ?><!--カテゴリに記事があればループ開始、なければ記事はありませんと返す-->
                     </ul>
                 </article>
-                <ul class="p-pagenation">
-                    <li class="p-pagenation__current-text">page 1/10</li>
-                    <li>
-                        <a class="p-pagenation__prev">
-                            <<
-                            <span class="p-pagenation__prev-text">前へ</span>
-                        </a>
-                    </li>
-                    <li>
-                        <ol class="p-pagenation-list">
-                            <li><a class="p-pagenation-list__item p-pagenation-list__item--current">1</a></li>
-                            <li><a class="p-pagenation-list__item">2</a></li>
-                            <li><a class="p-pagenation-list__item">3</a></li>
-                            <li><a class="p-pagenation-list__item">4</a></li>
-                            <li><a class="p-pagenation-list__item">5</a></li>
-                            <li><a class="p-pagenation-list__item">6</a></li>
-                            <li><a class="p-pagenation-list__item">7</a></li>
-                            <li><a class="p-pagenation-list__item">8</a></li>
-                            <li><a class="p-pagenation-list__item">9</a></li>
-                        </ol>
-                    </li>
-                    <li>
-                        <a class="p-pagenation__next">
-                            <span class="p-pagenation__next-text">次へ</span>
-                            >>
-                        </a>
-                    </li>
-                </ul>
+                <?php humburger_pagenavi(); ?>
             </main>
         </div><!--l-colum-main-->
-        <nav class="l-colum-nav p-nav">
-            <button class="p-nav__btn">×</button>
-            <h2 class=p-nav__title>Menu</h2>
-            <dl class="c-nav__menu">
-                <dt class="c-nav__menu-title">バーガー</dt>
-                <dd class="c-nav__menu-item">ハンバーガー</dd>
-                <dd class="c-nav__menu-item">チーズバーガー</dd>
-                <dd class="c-nav__menu-item">テリヤキバーガー</dd>
-                <dd class="c-nav__menu-item">アボカドバーガー</dd>
-                <dd class="c-nav__menu-item">フィッシュバーガー</dd>
-                <dd class="c-nav__menu-item">ベーコンバーガー</dd>
-                <dd class="c-nav__menu-item">チキンバーガー</dd>
-            </dl>
-            <dl class="c-nav__menu">
-                <dt class="c-nav__menu-title">サイド</dt>
-                <dd class="c-nav__menu-item">ポテト</dd>
-                <dd class="c-nav__menu-item">サラダ</dd>
-                <dd class="c-nav__menu-item">ナゲット</dd>
-                <dd class="c-nav__menu-item">コーン</dd>
-            </dl>
-            <dl class="c-nav__menu">
-                <dt class="c-nav__menu-title">ドリンク</dt>
-                <dd class="c-nav__menu-item">コーラ</dd>
-                <dd class="c-nav__menu-item">ファンタ</dd>
-                <dd class="c-nav__menu-item">オレンジ</dd>
-                <dd class="c-nav__menu-item">アップル</dd>
-                <dd class="c-nav__menu-item">紅茶（Ice/Hot）</dd>
-                <dd class="c-nav__menu-item">コーヒー（Ice/Hot）</dd>
-            </dl>
-        </nav>
+        <?php get_sidebar(); ?><!--sidebar.phpを読み込むテンプレートタグ（インクルードタグ）-->
     </div><!--l-colum-->
     <div class="p-nav__background"></div>
-    <footer class="l-footer p-footer">
-        <ul class="p-footer__category">
-            <li><a href="#">ショップ情報</a></li>
-            <li><a href="#">ヒストリー</a></li>
-        </ul>
-        <p class="p-footer__copy">Copyright: RaiseTech</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-
-</body>
+<?php get_footer(); ?><!--footer.phpを読み込むテンプレートタグ（インクルードタグ）-->

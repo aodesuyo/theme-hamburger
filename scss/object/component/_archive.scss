@@ -7,13 +7,14 @@
         }
         @include media_PC_wide{
             margin-bottom: 30px;
+            height: 24vw;
+            overflow: hidden;
         }
         &__visual{
             width: 100%;
             height: 50vw;
-            object-fit: cover;
             vertical-align: bottom;
-            object-position: left top;
+            object-fit: cover;
             @include media_PC{
                 width: 50%;
                 height: auto;
@@ -27,6 +28,7 @@
             background-color: $blown;
             margin-bottom: 21px;
             @include media_PC{
+                width: 50%;
                 margin-bottom: 0;
                 padding-right: 7%;
             }
@@ -42,9 +44,6 @@
             height: $btnHeight;
             width: $btnWidth;
             border-radius: 40px;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: $darkgray;
             margin-left:21vw;
             @include media_PC{
                 margin-left: 10vw;
@@ -53,6 +52,7 @@
             }
 
             @include media_PC_wide{
+                margin-bottom: 0px;
                 $btnHeight_PC_wide:$btnHeight*1.8;
                 $btnWidth_PC_wide:$btnWidth*1.8;
                 
@@ -62,6 +62,11 @@
                 margin-left: calc(50% - #{$btnWidth_PC_wide} /2);
 
             }
+        }
+        &__btn a{
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $darkgray;
         }
     }
 }

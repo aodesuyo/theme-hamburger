@@ -1,5 +1,5 @@
 .c-common{
-    &__title{
+    &__title ,&__title a{
         @include blockMargin;
         color:$blown;
         font-size: 2rem;
@@ -9,7 +9,7 @@
         &--lg{
             font-size: 2.4rem;
         }
-        &--white{
+        &--white ,&--white a{
             color: white;
             margin: 0;
             @include media_PC{
@@ -22,8 +22,12 @@
         }
 
     }
-    
-    &__text{
+    &__text h2{
+        @include blockMargin;
+        color:$blown;
+        font-size: 4rem;
+    }
+    &__text ,&__text p{
         color: $blown;
         font-size: $textSize;
         margin: 19px 0;
