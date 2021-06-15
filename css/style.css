@@ -473,113 +473,139 @@ Component
   }
 }
 
-.c-post-quote {
+.c-post h2, .c-post h3, .c-post h4, .c-post h5, .c-post h6 {
+  margin: 30px 0;
+  color: #3C2A10;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 834px) {
+  .c-post h2, .c-post h3, .c-post h4, .c-post h5, .c-post h6 {
+    margin: 60px 0;
+  }
+}
+
+.c-post h2 {
+  font-size: 4rem;
+}
+
+.c-post .has-huge-font-size {
+  font-size: 4.2rem;
+}
+
+.c-post .has-large-font-size {
+  font-size: 3.6rem;
+}
+
+.c-post .has-small-font-size {
+  font-size: 1.3rem;
+}
+
+.c-post p, .c-post strong {
+  color: #3C2A10;
+  font-size: 1.6rem;
+  margin: 19px 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .c-post p, .c-post strong {
+    margin: 60px 0;
+  }
+}
+
+.c-post .wp-block-quote {
   margin: 30px 0;
   background-color: #F5F5F5;
   padding: 10px 20px;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-quote {
+  .c-post .wp-block-quote {
     margin: 60px 0;
   }
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-quote {
-    padding: 0px 50px;
-    overflow: hidden;
+  .c-post .wp-block-quote {
+    padding: 0 50px;
   }
 }
 
-.c-post-quote__source-text {
+.c-post .wp-block-quote p {
+  padding: 30px 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 834px) {
+  .c-post .wp-block-quote p {
+    padding: 50px 0;
+  }
+}
+
+.c-post .wp-block-quote cite {
+  font-size: 1.6rem;
+  display: inline-block;
   color: #4A6C9B;
   border-bottom: solid 1.3px #4A6C9B;
-}
-
-.c-post-img {
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-img {
+  .c-post .wp-block-quote cite {
+    margin-bottom: 50px;
+  }
+}
+
+.wp-block-image {
+  margin: 30px 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 834px) {
+  .wp-block-image {
     margin: 60px 0;
   }
 }
 
-.c-post-img--wide {
+.wp-block-image.size-full {
   height: 32vw;
   max-height: 500px;
   width: 100%;
   overflow: hidden;
 }
 
-.c-post-img--center {
-  width: 75%;
-  height: 45%;
-  margin: 30px auto;
-}
-
-@media only screen and (min-width: 834px) {
-  .c-post-img--center {
-    margin: 60px auto;
-  }
-}
-
-.c-post-img img {
+.wp-block-image.size-full img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 90%;
 }
 
-.c-post-box2Col {
+.wp-block-media-text {
   margin: 30px 0;
-  display: flex;
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-box2Col {
+  .wp-block-media-text {
     margin: 60px 0;
   }
 }
 
-.c-post-box2Col__img {
-  width: 43%;
+.wp-block-media-text .wp-block-media-text__media {
+  align-self: start;
 }
 
-.c-post-box2Col__img--left {
-  margin-right: 10px;
-}
-
-@media only screen and (min-width: 834px) {
-  .c-post-box2Col__img--left {
-    margin-right: 20px;
-  }
-}
-
-.c-post-box2Col__img--right {
-  margin-left: 10px;
-}
-
-@media only screen and (min-width: 834px) {
-  .c-post-box2Col__img--right {
-    margin-left: 20px;
-  }
-}
-
-.c-post-box2Col__img img {
+.wp-block-media-text .wp-block-media-text__media img {
   width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-.c-post-box2Col__text {
-  width: 55%;
+.wp-block-media-text .wp-block-media-text__content p {
   margin: 0;
 }
 
-.c-post-grid {
+.wp-block-gallery .blocks-gallery-grid {
   margin: 30px 0;
   display: grid;
   gap: 20px;
@@ -587,83 +613,57 @@ Component
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-grid {
+  .wp-block-gallery .blocks-gallery-grid {
     margin: 60px 0;
   }
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-grid {
+  .wp-block-gallery .blocks-gallery-grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px 15px;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-post-grid {
+  .wp-block-gallery .blocks-gallery-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
 }
 
-.c-post-grid__item {
-  overflow: hidden;
-  height: 55vw;
-}
-
-@media only screen and (min-width: 834px) {
-  .c-post-grid__item {
-    height: 24vw;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .c-post-grid__item {
-    height: 13.4vw;
-  }
-}
-
-.c-post-grid__item img {
+.wp-block-gallery .blocks-gallery-grid .blocks-gallery-item {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
 }
 
-@media only screen and (min-width: 834px) {
-  .c-post-grid__item img {
-    object-position: center 70%;
-  }
-}
-
-.c-post-list {
+.c-post ul, ol {
   margin: 30px 0;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-list {
+  .c-post ul, ol {
     margin: 60px 0;
   }
 }
 
-.c-post-list__item {
+.c-post ul li, ol li {
   font-size: 1.6rem;
 }
 
-.c-post-list--order {
+li > ul {
+  padding-inline-start: 1.6rem;
+}
+
+.c-post ol {
   padding-inline-start: 1.6rem;
   list-style-type: decimal;
 }
 
-.c-post-list--order .c-post-list__item {
+.c-post ol li {
   list-style: decimal;
 }
 
-li > .c-post-list {
-  padding-inline-start: 1.6rem;
-}
-
-.c-post-pre {
+.c-post pre {
   margin: 30px 0;
   padding: 50px 50px 50px 60px;
   background-color: #F5F5F5;
@@ -671,49 +671,56 @@ li > .c-post-list {
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-pre {
+  .c-post pre {
     margin: 60px 0;
   }
 }
 
-.c-post-table {
+.c-post table {
   margin: 30px 0;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-right: 1px solid #707070;
+  border-bottom: 1px solid #707070;
   width: 100%;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-table {
+  .c-post table {
     margin: 60px 0;
   }
 }
 
-.c-post-table__row td:first-child {
+.c-post table tr td:first-child {
   width: 30%;
 }
 
-.c-post-table__data {
+.c-post table td {
   border: solid 1px #707070;
   padding: 28px 30px;
-  border-spacing: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
   font-size: 1.6rem;
 }
 
-.c-post-button {
+.wp-block-button {
   width: 100%;
   background: linear-gradient(#F2EDE9, #DED8D3);
   border: solid 1px #707070;
   padding: calc(1.75 * 1.6rem);
   border-radius: 1.6rem;
+  text-align: center;
 }
 
-.c-post-button a {
+.wp-block-button a {
   font-weight: bold;
   font-size: 1.6rem;
+  background-color: transparent;
+  color: #3C2A10;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-post-button {
+  .wp-block-button {
     width: 429px;
   }
 }

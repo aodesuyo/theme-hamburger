@@ -15,6 +15,6 @@
                 <div class="l-header-top">
                     <h1 class="p-header-top__title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ) ?></a></h1>
-                    <?php get_search_form() ?>
+                    <?php get_search_form(); ?>
                 </div>
         </header>

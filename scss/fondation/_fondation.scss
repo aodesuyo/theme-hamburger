@@ -28,6 +28,14 @@ $textSize:1.6rem;
     margin: 60px 0;
   }  
 }
+@mixin commonText{
+  color: $blown;
+  font-size: $textSize;
+  margin: 19px 0;
+  @include media_PC{
+      margin: 60px 0;
+  }
+}
 
 body{
   overflow-x: hidden;

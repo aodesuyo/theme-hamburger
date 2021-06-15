@@ -5,7 +5,7 @@
                 ( '<h3 class="c-common__title c-common__title--white"><a href="'.esc_url( get_permalink()).'">','</a></h3>');
             ?>
             <div class="c-archive-card__desc">
-                <phyhh class="c-common__text c-common__text--white"><?php echo get_the_excerpt(); ?></phyhh>
+                <p class="c-common__text c-common__text--white"><?php echo get_the_excerpt(); ?></p>
             </div>
             <button class="c-archive-card__btn"><a href="<?php echo get_permalink();?>">詳しく見る</a></button>
         </div>

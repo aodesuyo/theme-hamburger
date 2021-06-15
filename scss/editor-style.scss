@@ -1,4 +1,6 @@
-.c-post{
+@import "./fondation/_fondation.scss";
+
+.mce-content-body{
     h2,h3,h4,h5,h6{
         @include blockMargin;
         color:$blown;
@@ -23,7 +25,7 @@
     }
 }
 
-.c-post{
+.mce-content-body{
     .wp-block-quote{
         @include blockMargin;
         background-color: $lightgray;
@@ -101,7 +103,7 @@
     width: 100%;
 }
 
-.c-post ul,ol{
+.mce-content-body ul,ol{
     @include blockMargin;
     li{
         font-size: $textSize;
@@ -111,7 +113,7 @@
        
     }
 }
-.c-post ol{
+.mce-content-body ol{
     padding-inline-start: $textSize;
     list-style-type: decimal;
     li{
@@ -119,7 +121,7 @@
     }
 }
 
-.c-post{
+.mce-content-body{
     pre{
         @include blockMargin;
         padding:50px 50px 50px 60px;
@@ -127,7 +129,7 @@
         font-size: $textSize;
     }
 }
-.c-post{
+.mce-content-body{
     table{
         @include blockMargin;
         border-collapse: separate;
