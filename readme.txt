@@ -1,6 +1,5 @@
-/* Tested up to: 5.7.2
-	Requires PHP: 7.3.5
-	Theme Name: hamburger
+/*
+Theme Name: hamburger
 	Description: sample theme for WordPress
 	Version: 1.0.0
 	Theme URI: https://github.com/aoyuzuki/theme-hamburger

@@ -9,8 +9,13 @@
         ));//html5
         add_theme_support('post-thumbnails');//アイキャッチ画像
         add_theme_support('title-tag');//タイトルを投稿ページに合わせて出力する
-        add_theme_support('menus');//メニュー機能を有効にする
-
+        add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'wp-block-styles' );
+        add_theme_support( 'custom-header' );
+        add_theme_support( 'responsive-embeds' );
+        add_theme_support( 'align-wide' );
+        add_theme_support( 'custom-logo' );
+        add_theme_support( 'custom-background') ;
         register_nav_menus(array(
             'sidebar'=>'サイドバー',
             'footerMenu'=>'フッターメニュー'
@@ -32,8 +37,6 @@
     }
     add_action('wp_enqueue_scripts','readScript');
     /*関数はwp_enqueueをフックにして実行される*/
-
-    add_theme_support( 'menus' );//メニュー機能を有効にする
     
     function footer_widgets_init() {
         register_sidebar (
@@ -81,6 +84,16 @@
         add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
     }
     add_action( 'admin_init', 'hamburger_theme_add_editor_styles' );
+
+    if ( ! isset( $content_width ) ) {
+        $content_width = 581;
+    }
+    
+    function custom_img_caption_shortcode_width( $width ){
+        return 0;
+    }
+    add_filter( 'img_caption_shortcode_width', 'custom_img_caption_shortcode_width' );
+    //wp-captionクラスのstyle指定をなくす
 
     
   

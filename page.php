@@ -8,7 +8,8 @@
             <?php the_title('<h1 class="c-visual__title">','</h1>'); ?>
         </div>
             <article class="l-post-wrapper c-post">
-                <?php the_content() ?>
+                <?php the_content(); ?>
+                <?php wp_link_pages(); ?>
             </article>
             <?php endwhile;?>
             </div>

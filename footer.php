@@ -9,7 +9,6 @@
     ?>
     <?php dynamic_sidebar( 'footer_widget' ); ?>
     </footer>
-    <script src="script.js"></script>
     <?php wp_footer(); ?>
 </body>
 </html>

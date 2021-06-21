@@ -34,6 +34,39 @@ code {
   padding-left: 0;
 }
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar　*/
+}
+
 /* =========================================================
 Layout
 ========================================================= */
@@ -203,26 +236,26 @@ Component
   }
 }
 
-.c-archive {
+.c-archive, .sticky {
   overflow: hidden;
 }
 
 @media only screen and (min-width: 834px) {
-  .c-archive-card {
+  .c-archive-card, .sticky-card {
     display: flex;
     margin-bottom: 21px;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-archive-card {
+  .c-archive-card, .sticky-card {
     margin-bottom: 30px;
     height: 24vw;
     overflow: hidden;
   }
 }
 
-.c-archive-card__visual {
+.c-archive-card__visual, .sticky-card__visual {
   width: 100%;
   height: 50vw;
   vertical-align: bottom;
@@ -230,14 +263,14 @@ Component
 }
 
 @media only screen and (min-width: 834px) {
-  .c-archive-card__visual {
+  .c-archive-card__visual, .sticky-card__visual {
     width: 50%;
     height: auto;
     vertical-align: baseline;
   }
 }
 
-.c-archive-card__wrapper {
+.c-archive-card__wrapper, .sticky-card__wrapper {
   display: flex;
   flex-direction: column;
   padding: 30px 20% 44px 5%;
@@ -246,7 +279,7 @@ Component
 }
 
 @media only screen and (min-width: 834px) {
-  .c-archive-card__wrapper {
+  .c-archive-card__wrapper, .sticky-card__wrapper {
     width: 50%;
     margin-bottom: 0;
     padding-right: 7%;
@@ -254,13 +287,13 @@ Component
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-archive-card__wrapper {
+  .c-archive-card__wrapper, .sticky-card__wrapper {
     padding-top: 53px;
     padding-bottom: 60px;
   }
 }
 
-.c-archive-card__btn {
+.c-archive-card__btn, .sticky-card__btn {
   background-color: #fff;
   height: 42px;
   width: 163px;
@@ -269,7 +302,7 @@ Component
 }
 
 @media only screen and (min-width: 834px) {
-  .c-archive-card__btn {
+  .c-archive-card__btn, .sticky-card__btn {
     margin-left: 10vw;
     margin-top: auto;
     margin-bottom: 40px;
@@ -277,7 +310,7 @@ Component
 }
 
 @media only screen and (min-width: 1920px) {
-  .c-archive-card__btn {
+  .c-archive-card__btn, .sticky-card__btn {
     margin-bottom: 0px;
     height: 75.6px;
     width: 293.4px;
@@ -285,7 +318,7 @@ Component
   }
 }
 
-.c-archive-card__btn a {
+.c-archive-card__btn a, .sticky-card__btn a {
   font-size: 1.6rem;
   font-weight: 600;
   color: #707070;
@@ -581,6 +614,23 @@ Component
   object-position: center 90%;
 }
 
+.alignleft {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignright {
+  display: block;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
 .wp-block-media-text {
   margin: 30px 0;
 }
@@ -603,6 +653,19 @@ Component
 
 .wp-block-media-text .wp-block-media-text__content p {
   margin: 0;
+}
+
+.wp-caption {
+  width: 100%;
+  height: 100%;
+}
+
+.wp-caption-text {
+  color: #3C2A10;
+}
+
+.gallery-caption {
+  color: #3C2A10;
 }
 
 .wp-block-gallery .blocks-gallery-grid {

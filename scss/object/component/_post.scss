@@ -68,6 +68,20 @@
         }
     }
 }
+.alignleft{
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+.aligncenter{
+    display: block;
+    margin: 0 auto;
+}
+.alignright{
+    display: block;
+    margin-right: 0px;
+    margin-left: auto;
+}
 .wp-block-media-text{
     @include blockMargin;
     .wp-block-media-text__media{
@@ -81,6 +95,16 @@
     .wp-block-media-text__content p{
         margin:0;
     }
+}
+.wp-caption{
+    width: 100%;
+    height: 100%;
+    &-text{
+        color:$blown;
+    }
+}
+.gallery-caption{
+    color: $blown;
 }
 .wp-block-gallery .blocks-gallery-grid{
      @include blockMargin;
