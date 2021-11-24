@@ -17,19 +17,45 @@
             font-weight: 600;
         }
     }
-    &__current-text{
+    .pages{
         display: none;
         @include media_PC{
             display: block;
         }
     }
-    &__prev ,&__next{
+    .previouspostslink ,.nextpostslink{
         display: block;
         margin: 0 10px;
+        display: flex;
         span{
+            margin: 8px;
             @include media_PC{
                 display: none;
             }    
+        }
+        i{
+            padding:5px 0;
+            font-size: 3rem;
+        }
+    }
+    .page{
+        display: none;
+        @include media_PC{
+        display: block;
+        padding: 7px 13px;
+        border: solid 1.5px $darkgray;
+        margin: 0 7.5px;
+        }
+    }
+    .current{
+        display: none;
+        @include media_PC{
+        display: block;
+        padding: 7px 13px;
+        border: solid 1.5px $darkgray;
+        margin: 0 7.5px;
+        background-color: $blown;
+        color: white;
         }
     }
 }

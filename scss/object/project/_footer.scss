@@ -1,5 +1,5 @@
 .p-footer{
-    background-image: url(../../../img/footer-bg.jpg);
+    background-image: url(../img/footer-bg.jpg);
     background-repeat: repeat;
     text-align: center;
     &__category{
@@ -18,6 +18,10 @@
             font-size: 1.8rem;
             padding:0 10px;
         }
+    }
+    &-widget{
+        display: flex;
+        justify-content: center;
     }
     &__copy{
         color:white;

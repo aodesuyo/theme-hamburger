@@ -1,4 +1,4 @@
-$(document).ready(function(){
+(function($) {
     $('.p-header__nav-btn').on('click',function(){
         $('.l-colum-nav').css({
             transform:'translate(0)',
@@ -32,4 +32,4 @@ $(document).ready(function(){
 
         }
     });
-});
+})( jQuery );
